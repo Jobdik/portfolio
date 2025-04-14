@@ -2,7 +2,7 @@
 
 .dark-mode-btn {
 	margin-left: 70%;
-	
+
 	position: relative;
 	display: flex;
 	justify-content: space-between;
@@ -13,7 +13,7 @@
 
 	border-radius: 2.5rem;
 	border: #464646 solid 1px;
-	
+
 	background-color: #272727;
 }
 
@@ -22,7 +22,7 @@
 
 	position: absolute;
 	top: 1%;
-	left:0;
+	left: 0;
 
 	display: block;
 	width: 1.5rem;
@@ -52,6 +52,6 @@
 	transition: opacity 0.2s ease-in;
 }
 
-.dark-mode-btn__icon--active{
+.dark-mode-btn__icon--active {
 	opacity: 1;
 }

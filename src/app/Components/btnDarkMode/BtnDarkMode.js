@@ -21,6 +21,8 @@ const BtnDarkMode = () => {
         } else {
             document.body.classList.remove('dark');
         }
+
+        window.dispatchEvent(new Event("darkModeChanged"));
     }, [DarkMode]);
 
     // Effect to listen for system dark mode changes and update state accordingly
