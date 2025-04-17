@@ -3,12 +3,13 @@
 	--blackpure: #000;
 	--black: #171718;
 	--black-border: #26292d;
-	--white: #fff;
+	--white: #f2f2f2;
+	--white-bg: #eeeeee;
 	--purple: #5c62ec;
 
 	/* Nav */
 	--nav-bg: var(--black);
-	--nav-border: var(--black-border);
+	--nav-border: var(--black);
 	--nav-text: var(--white);
 
 	/* Header */
@@ -20,14 +21,25 @@
 	--footer-text: var(--white);
 
 	/* Light mode */
-	--page-bg: var(--white);
+	--page-bg: var(--white-bg);
 	--text-color: var(--black);
 	--accent: var(--purple);
+	--accent-rgb: 92, 98, 236;
+	--accent-light: #696ef0; 
+
 	--title-1: var(--accent);
 
 	--project-card-bg: var(--white);
 	--project-card-text: var(--black);
 	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+
+	--card-accent: var(--accent);
+	--cards-bg: var(--white);
+	--cards-text: var(--black);
+
+	--skils-bg: #f4f7fc;
+	--skils-text: #333;
+
 
 }
 
@@ -41,11 +53,19 @@
 	--project-card-bg: var(--black);
 	--project-card-text: var(--white);
 	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
-
+	--nav-border: var(--black-border);
 
 	--header-bg-color: var(--black);
 	--particle-color: #ffffff;
 	--link-color: #ffffff;
+
+	--cards-bg: #171718;;
+	--cards-text: var(--white);
+
+	--skils-bg: #2c2f3875;
+  	--skils-text: #e1e1ff;
+
+	
 }
 
 
@@ -65,7 +85,7 @@
 
 html,
 body {
-	min-height: 100vh;
+	min-height: 150vh;
 
 	font-family: 'DM Sans', sans-serif;
 	letter-spacing: -0.5px;
@@ -74,9 +94,11 @@ body {
 	background-color: var(--page-bg);
 	color: var(--text-color);
 
-	--header-bg-color: #ffffff;
+	--header-bg-color: var(--white-bg);	
 	--particle-color: var(--black);
 	--link-color: var(--black);
+
+	transition: all 0.3s ease;	
 }
 
 #root {

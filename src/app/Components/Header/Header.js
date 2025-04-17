@@ -15,7 +15,7 @@ const Header = () => {
 					<br />a frontend developer
 				</h1>
 				<div className={styles.header__text}>
-					<p>with passion for learning and creating.</p>
+					<p>specializing in React & Node.js.</p>
 				</div>
 				<a href="#!" className={styles.btn}>
 					Download CV
