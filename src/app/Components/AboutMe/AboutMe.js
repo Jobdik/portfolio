@@ -4,7 +4,7 @@ const AboutMe = () => {
     return (
         <>
             <section className={styles.AboutMe}>
-                <h2 className={styles.title}>AboutMe</h2>
+                <h2 className={styles.title}>About Me</h2>
                         <div className={styles.bio}>
                             <div className={styles.card}>
                                 <h3 className={styles.card__title}>Education</h3>

@@ -16,16 +16,21 @@
 	padding: 12px 0;
 }
 
+.active{
+	padding: 20px 0;
+}
+
 .nav_row {
 	display: flex;
 	align-items: center;
 	column-gap: 30px;
-	row-gap: 20px;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 }
 
 .logo {
 	padding-left: 24px;
+	margin-right: auto;
 	color: var(--nav-text);
 	font-size: 24px;
 	font-family: 'Poppins', sans-serif;
@@ -36,9 +41,9 @@
 }
 
 .nav_list {
+	padding-right:8rem;
 	display: flex;
-	flex-wrap: wrap;
-	row-gap: 10px;
+	flex-wrap: nowrap;
 	align-items: center;
 	column-gap: 40px;
 	font-size: 16px;
@@ -77,12 +82,51 @@
 }
 
 .hamburger {
-	display: none;
-	font-size: 30px;
+	display: block;
 	cursor: pointer;
-	padding-right: 24px;
+	width: 30px;
+	height: 22px;
+	position: relative;
+	transition: transform 0.3s ease;
+	margin-right: 24px;
 }
 
+.hamburger div {
+	background-color: var(--nav-text);
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	transition: all 0.3s ease;
+	border-radius: 2px;
+}
+
+.hamburger div:nth-child(1) {
+	top: 0;
+}
+
+.hamburger div:nth-child(2) {
+	top: 9px;
+}
+
+.hamburger div:nth-child(3) {
+	top: 18px;
+}
+
+/* Активное состояние — Крестик */
+.hamburger.active div:nth-child(1) {
+	transform: rotate(45deg);
+	top: 9px;
+}
+
+.hamburger.active div:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+	transform: rotate(-45deg);
+	top: 9px;
+}
 .nav_list {
 	display: flex;
 	flex-wrap: wrap;
@@ -95,22 +139,49 @@
 	list-style-type: none;
 }
 
-@media (max-width: 768px) {
+
+
+@media (min-width: 1024px) {
 	.nav_list {
-		display: none;
-		flex-direction: column;
+		padding-right:5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.logo {
+		font-size: 20px;
+	}
+
+	.nav_list {
+		visibility: hidden;
 		width: 100%;
-		align-items: center;
+		opacity: 0;
+		max-height: 0;
+		position: absolute;
+		top: 66.59px;
+		left: 0;
+		background-color: var(--nav-bg);
+		padding-top: 10px;
+		border-top: 1px solid var(--nav-border-second);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		transition: max-height 0.7s ease-in-out, opacity 0.4s ease-in-out, visibility 0s 0.7s; 
+		overflow: hidden;
 	}
 
 	.nav_list.show {
-		display: flex;
+		visibility: visible;
+		opacity: 1;
+		max-height: 500px;
+		transition: max-height 0.7s ease-in-out, opacity 0.7s ease-in-out, visibility 0s; 
 	}
+	
 
 	.nav_list__item {
+		width: 100vw;
+		padding: 10px ;
 		text-align: center;
-		width: 100%;
-		padding: 15px 0;
+		border-bottom: 1px solid var(--nav-border-second);
+		transition: background-color 0.4s ease, transform 0.4s ease; 
 	}
 
 	.hamburger {
@@ -118,11 +189,17 @@
 	}
 
 	.nav_list__link {
+		width: 95vw;
 		text-align: center;
-		width: 100%;
+		padding: 5px 0 ;
+		transition: color 0.4s ease; 
+		display: block;
+	}
+
+	.nav_list__link:hover {
+		color: var(--accent); 
 	}
 }
-
 @media (min-width: 769px) {
 	.nav_list {
 		display: flex;

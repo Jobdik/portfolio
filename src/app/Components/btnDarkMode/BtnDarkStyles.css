@@ -1,8 +1,6 @@
 /* Dark mode btn */
 
 .dark-mode-btn {
-	margin-left: 70%;
-
 	position: relative;
 	display: flex;
 	justify-content: space-between;

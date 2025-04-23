@@ -29,15 +29,21 @@ function NavBar () {
     
 
     return (
-        <nav className={styles.nav + " " + (scrolled ? styles.scrolled : "")}>
+        <nav className={styles.nav + " " + (scrolled ? styles.scrolled : "") + " " + (menuOpen ? styles.active : '')}>
             <div className={styles.container}>
                 <div className={styles.nav_row}>
                     <a href="./index.html" className={styles.logo}><strong>Dmytro</strong> Vasilewskyi</a>
 
                     <BtnDarkMode />
                     
-                    <div className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle navigation">
-                    &#9776;
+                    <div
+                    className={styles.hamburger}
+                    onClick={toggleMenu}
+                    aria-label="Toggle navigation"
+                    >
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
 
                     <ul className={`${styles.nav_list} ${menuOpen ? styles.show : ''}`}>

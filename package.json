@@ -10,10 +10,14 @@
   },
   "dependencies": {
     "next": "15.2.4",
+    "owl.carousel": "^2.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
+    "react-owl-carousel": "^2.3.3",
+    "react-slick": "^0.30.3",
     "react-tsparticles": "^2.12.2",
+    "slick-carousel": "^1.8.1",
     "tsparticles": "^3.8.1",
     "tsparticles-slim": "^2.12.0"
   }
