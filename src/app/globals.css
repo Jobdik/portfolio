@@ -36,6 +36,8 @@
 	--project-card-text: var(--black);
 	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
 
+	--shadow-color: rgba(0, 0, 0, 0.25);
+
 	--card-accent: var(--accent);
 	--cards-bg: var(--white);
 	--cards-text: var(--black);
@@ -59,6 +61,8 @@ body {
 	--header-bg-color: var(--white-bg);	
 	--particle-color: var(--black);
 	--link-color: var(--black);
+
+	--shadow-color: rgba(0, 0, 0, 0.25);
 }
 body.loaded {
 	transition: color 0.3s ease, background-color 0.3s ease;
@@ -73,12 +77,16 @@ body.loaded {
 
 	--project-card-bg: var(--black);
 	--project-card-text: var(--white);
+
 	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+
 	--nav-border: var(--black-border);
 
 	--header-bg-color: var(--black);
 	--particle-color: #ffffff;
 	--link-color: #ffffff;
+
+	--shadow-color: rgba(255, 255, 255, 0.05);
 
 	--cards-bg: #171718;;
 	--cards-text: var(--white);

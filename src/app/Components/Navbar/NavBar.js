@@ -32,7 +32,7 @@ function NavBar () {
         <nav className={styles.nav + " " + (scrolled ? styles.scrolled : "") + " " + (menuOpen ? styles.active : '')}>
             <div className={styles.container}>
                 <div className={styles.nav_row}>
-                    <a href="./index.html" className={styles.logo}><strong>Dmytro</strong> Vasilewskyi</a>
+                    <a href="./" className={styles.logo}><strong>Dmytro</strong> Vasilewskyi</a>
 
                     <BtnDarkMode />
                     

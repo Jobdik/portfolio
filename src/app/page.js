@@ -1,14 +1,14 @@
 'use client'
+import React, { useState, useEffect, Suspense} from 'react';
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import NavBar from "./Components/Navbar/NavBar";
 import Header from "./Components/Header/Header";
 import Projects from "./Components/Projects/Projects";
-import AboutMe from "./Components/AboutMe/AboutMe";
+const AboutMe = React.lazy(() => import('./Components/AboutMe/AboutMe'));
+const Skills  = React.lazy(() => import('./Components/Skills/Skills'));
 import Footer from "./Components/Footer/Footer";
-
-import { useState, useEffect } from "react";
-
 
 
 export default function Home() {
@@ -28,7 +28,12 @@ export default function Home() {
     <div className={styles.Main}>
       <NavBar/>
       <Header/>
-      <AboutMe/>
+      <Suspense fallback={null}>
+        <AboutMe />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Skills />
+      </Suspense>
       <Projects/>
       <Footer/>
     </div>
