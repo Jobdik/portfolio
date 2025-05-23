@@ -6,10 +6,6 @@ import detectDarkMode from '../../Utils/detectDarkMode';
 import { IoIosSunny, IoIosMoon } from "react-icons/io";
 import './BtnDarkStyles.css';
 
-/**
- * Button component to toggle dark mode.
- * Uses local storage to persist the user's preference.
- */
 const BtnDarkMode = () => {
     // State to manage dark mode, initialized from local storage or system preference
     const [DarkMode, setDarkMode] = LocalStorage('darkMode', detectDarkMode());

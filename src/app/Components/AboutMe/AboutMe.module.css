@@ -84,3 +84,8 @@
   margin-right: 0.5rem;
 }
 
+@media screen and (max-width: 768px) {
+  .bio {
+    grid-template-columns: 1fr;
+  }
+}
